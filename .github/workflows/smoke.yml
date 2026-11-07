@@ -1,0 +1,23 @@
+name: NeonScope smoke checks
+on:
+  push:
+    paths:
+      - 'index.html'
+      - '*.js'
+      - '*.css'
+      - '*.webmanifest'
+      - 'test-smoke.cjs'
+      - '.github/workflows/smoke.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check syntax, UI element references and offline assets
+        run: node test-smoke.cjs
