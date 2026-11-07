@@ -64,3 +64,8 @@ NeonScope is a free, open browser-based audio/visual creation studio. No subscri
 - The remaining exploratory 100-feature wishlist
 
 No paid tiers or payment processing are planned. New functionality should be validated on a physical iPhone before being considered production-ready.
+
+## November 2026 unified workspace upgrade
+Implemented in source (device/browser validation pending): mobile Visuals/Draw/Music/Library tabs, fullscreen canvas with fallback, local visual preset gallery, 16-step kick/snare/hi-hat/bass beat grid with JSON pattern import/export, finger drawing with brush width and redo, master transport stop for sequencer, error notices, refreshed offline service worker.
+
+Still planned / not yet delivered: full multitrack song arrangement and instrument editor; beat export to WAV; persistent media library for audio/video; guaranteed video-with-audio export on Safari; advanced frequency-band-driven visual analysis and instrument separation; full drawing eraser/shape recognition/mirroring; accessibility and automated cross-browser regression suite; hardware/device validation; real streaming-service audio analysis (restricted by provider policies); production-grade diagnostics and performance benchmarks. These should not be represented as complete.
