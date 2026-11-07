@@ -1,5 +1,9 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id), findings=[], stages=[];
+const roster=[['Agent 1 · Control auditor','ATLAS','Buttons and wiring'],['Agent 2 · Visual auditor','PRISM','Canvas and animation'],['Agent 3 · Audio auditor','ECHO','Synth and melody'],['Agent 4 · Delivery auditor','SENTINEL','Scripts and offline'],['Agent 5 · Cross-checker','CIPHER','Findings review'],['Agent 6 · Repair planner','FORGE','Fix handoff']];
+let lastRun=null,auto=true;const liveIssues=new Map(),recent=[];
+function live(agent,id,detail,fix){const key=agent+':'+id;liveIssues.set(key,{agent,id,detail,fix,time:new Date().toISOString()});if(liveIssues.size>30)liveIssues.delete(liveIssues.keys().next().value);recent.unshift({time:new Date().toISOString(),id,detail});recent.length=Math.min(30,recent.length);if(lastRun)dashboard()}
+
 function check(agent,id,ok,detail,fix){findings.push({agent,id,ok,detail,fix});return ok}
 function stage(name,fn){try{fn();stages.push(name+': completed')}catch(e){stages.push(name+': error '+e.message);check(name,'agent-error',false,e.message,'Inspect this agent for an exception')}}
 function controls(){const pairs={transportVisual:['tabVisual','evolve','view'],transportSynth:['tabMusic','synthPlay','synthStatus'],drawSound:['drawLayer','drawStatus'],transportStop:['synthStop','freeze'],agentRun:['agentCopy','agentDownload']};for(const [id,refs] of Object.entries(pairs)){check('Agent 1 · Control auditor',id,!!$(id)&&refs.every(x=>!!$(x)),'Control and dependencies '+(refs.filter(x=>!$(x)).join(', ')||'present'),'Repair missing DOM IDs or script wiring')}}
