@@ -7,5 +7,5 @@ $('beatRandom').onclick=()=>{grid=rows.map((r,i)=>Array.from({length:16},(_,j)=>
 $('beatTempo').oninput=()=>{$('beatBpm').textContent=$('beatTempo').value;if(playing){stop();$('beatStatus').textContent='Tempo changed; press Play to restart'}};
 $('beatSave').onclick=()=>{const data=JSON.stringify({version:1,tempo:Number($('beatTempo').value),grid});const a=document.createElement('a'),url=URL.createObjectURL(new Blob([data],{type:'application/json'}));a.href=url;a.download='neonscope-beat.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000)};
 $('beatLoad').onclick=()=>$('beatFile').click();$('beatFile').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const obj=JSON.parse(await f.text());if(!Array.isArray(obj.grid)||obj.grid.length!==4||!obj.grid.every(r=>Array.isArray(r)&&r.length===16&&r.every(x=>typeof x==='boolean')))throw Error('Invalid beat pattern');stop();grid=obj.grid;$('beatTempo').value=Math.max(60,Math.min(180,Number(obj.tempo)||110));$('beatBpm').textContent=$('beatTempo').value;render();$('beatStatus').textContent='Beat loaded'}catch(err){$('beatStatus').textContent=err.message}e.target.value=''};
-window.addEventListener('pagehide',stop);render();
+window.addEventListener('neonscope-stop-all',stop);window.addEventListener('pagehide',stop);render();
 })();
