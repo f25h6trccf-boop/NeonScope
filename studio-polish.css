@@ -1,0 +1,38 @@
+/* NeonScope visual refresh · build 15 */
+:root{--bg:#060911;--surface:#121b29;--edge:#2a3a4d;--mint:#93ffd0;--muted:#9aaec3}
+html{background:#060911}body{background:radial-gradient(ellipse 70% 36% at 16% -6%,#16494766,transparent 75%),radial-gradient(ellipse 48% 50% at 100% 40%,#34275d55,transparent 76%),#060911;background-attachment:fixed;color:#edf9ff;letter-spacing:.005em}
+main{max-width:1360px;padding:clamp(14px,2.5vw,36px) clamp(12px,2.8vw,38px) 85px}
+.brand{padding-bottom:15px;border-bottom:1px solid #ffffff14;margin-bottom:24px}
+.brand-mark{font-size:14px;letter-spacing:.25em;text-shadow:0 0 24px #72ffd955}
+.brand .pill{background:#132a28;border-color:#36665a;color:#a3f9d6}
+.hero{margin-bottom:23px}.hero h1{font-size:clamp(35px,5vw,66px);line-height:1.02;letter-spacing:-.055em;background:linear-gradient(110deg,#ffffff 5%,#c6fff0 48%,#91d8ff 95%);-webkit-background-clip:text;background-clip:text;color:transparent;max-width:900px}.hero p{font-size:clamp(13px,1.3vw,16px);line-height:1.6;max-width:630px;color:#9db5c7}
+.hero .eyebrow{font-size:11px;letter-spacing:.19em;margin-bottom:10px}
+.tool-nav:not(.quick-links){display:flex;gap:8px;padding:5px;margin:0 0 18px;background:#0d1520d9;border:1px solid #273748;border-radius:16px;width:max-content;max-width:100%;box-shadow:0 12px 36px #0004}
+.tool-nav:not(.quick-links) button{background:transparent;border:1px solid transparent;border-radius:11px;min-width:92px;color:#a9bfd0;font-weight:750;transition:background .18s,color .18s,box-shadow .18s}
+.tool-nav:not(.quick-links) button:hover{background:#1c2d38;color:#e5fff6}
+.tool-nav:not(.quick-links) button[aria-selected=true]{background:linear-gradient(130deg,#8dffd2,#6cdbd7);color:#05201e;box-shadow:0 4px 20px #6bf2bd38}
+.quick-links{margin-bottom:13px;gap:7px}.quick-links a{border-color:#273b4a;background:#101b29;font-size:11px;color:#9cb4c8}
+.workspace{grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:20px}
+.visual-frame{position:relative;padding:10px;border-radius:25px;border:1px solid #466e72;background:linear-gradient(150deg,#20373b,#0a101b 45%,#101a2b);box-shadow:0 35px 90px #0009,0 0 65px #56e9b312}
+.visual-frame:before{content:"";position:absolute;inset:-1px;border-radius:25px;pointer-events:none;border:1px solid #7bffd022;box-shadow:inset 0 1px 0 #d6ffef26}
+.canvas-stack{border-radius:17px;overflow:hidden;box-shadow:0 0 0 1px #a5ffe426,0 15px 45px #0008;background:#020609}
+.canvas-stack #view{border:0;border-radius:0}
+.visual-footer{padding:14px 8px 5px;gap:10px;flex-wrap:wrap}.visual-footer button{border:1px solid #395a60;background:#172b33;color:#b6ffe5}
+.workspace section,.bottom-tools section{border-radius:19px;background:linear-gradient(155deg,#192538ef,#101926f5);border:1px solid #304459;box-shadow:0 14px 40px #0004;padding:20px}
+.workspace section strong,.bottom-tools section strong{font-size:16px;letter-spacing:-.012em}
+.workspace section strong:before,.bottom-tools section strong:before{background:linear-gradient(#adffdf,#4bc9dd);box-shadow:0 0 15px #70eacb77}
+.workspace section p,.bottom-tools section p{line-height:1.55;color:#a7bdd0}
+button,select{border-radius:12px;border-color:#405467;background:#233345;color:#e8f9ff;box-shadow:inset 0 1px 0 #ffffff0b}
+button.primary{background:linear-gradient(120deg,#a0ffd2,#6fe3dc);color:#05211d;box-shadow:0 6px 24px #6dffbf20}
+button:hover:not(:disabled){border-color:#8dffd2;background:#2c4250}
+button.primary:hover:not(:disabled){background:linear-gradient(120deg,#c6ffe6,#8cefe7)}
+input[type=range]{accent-color:#8fffd0}input[type=text],input[type=number]{background:#0c1723;border:1px solid #3a5063;color:#f2fbff;border-radius:11px}
+#status,.studio-notice{background:#0c1c24;border:1px solid #31584f;color:#b1f1d9;padding:12px 15px;border-radius:12px}
+#draw-tools{background:linear-gradient(155deg,#193b36,#111e2c)!important;border-color:#457d6a!important}
+.draw-motion-panel{background:linear-gradient(150deg,#1a393b,#0d1b2b);border-color:#396c6a}
+#preset-tools{border-color:#3c6676}.beat-step{transition:transform .1s,background .1s}.beat-step.active{box-shadow:0 0 10px #72ffbc50}
+.footer-note{padding-top:20px;border-top:1px solid #ffffff12}
+@media(min-width:1000px){.workspace .visual-column{top:20px}.hero{margin-bottom:25px}}
+@media(max-width:850px){.workspace{grid-template-columns:1fr;gap:14px}.workspace .visual-column{position:static}.hero h1{font-size:clamp(36px,7vw,52px)}}
+@media(max-width:520px){main{padding:13px 12px 70px}.brand{margin-bottom:18px;padding-bottom:12px}.brand-mark{font-size:12px}.brand .pill{font-size:10px}.hero{margin-bottom:17px}.hero h1{font-size:clamp(34px,9vw,43px)}.hero p{font-size:13px}.tool-nav:not(.quick-links){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;gap:4px;padding:4px;margin-bottom:13px}.tool-nav:not(.quick-links) button{min-width:0;padding:10px 5px;font-size:12px;min-height:42px}.visual-frame{padding:7px;border-radius:19px}.visual-frame:before{border-radius:19px}.canvas-stack{border-radius:13px}.visual-footer{padding:10px 6px 3px}.workspace section,.bottom-tools section{padding:16px;border-radius:17px}.workspace section strong,.bottom-tools section strong{font-size:15px}.transport .flex button{flex:1 1 130px}}
+@media(prefers-reduced-motion:reduce){button,.beat-step,.tool-nav button{transition:none!important}}
