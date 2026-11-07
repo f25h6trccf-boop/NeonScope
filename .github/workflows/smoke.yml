@@ -21,3 +21,9 @@ jobs:
           node-version: '22'
       - name: Check syntax, UI element references and offline assets
         run: node test-smoke.cjs
+      - name: Install Playwright browser runner
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Test real UI playback and animation in Chromium
+        run: node test-browser.cjs
