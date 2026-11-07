@@ -42,3 +42,25 @@ NeonScope is a free, open browser-based audio/visual creation studio. No subscri
 - Never add payment processing, paywalls, subscription billing or premium-only features.
 - Respect device/browser limits; do not promise MP4, 4K or AI model inference on every iPhone.
 - Verify each phase before declaring it finished.
+
+## Implementation status — November 2026
+
+### Implemented in code (not yet device-validated)
+- Eight new procedural effects in studio.html, including 3D projected wireframe and particles
+- Automatic evolving patterns, configurable speed, complexity, colors and trails
+- XY stereo WAV export (PCM 16-bit, 44.1 kHz), with adjustable trace frequency
+- Basic SVG single-path import and path sampling
+- Local project save/load and JSON export/import
+- Browser recording with format negotiation, PNG export, and music upload
+- Phone orientation interaction where permission and browser allow
+- PWA manifest, SVG icon, and basic offline service worker
+
+### Not complete
+- Hardware-validated XY signal fidelity and optimized trace ordering
+- Full 3D scene editing, GPU shaders, advanced physics, AI generation
+- Advanced multitrack editing, timeline, keyframes, robust cross-platform MP4 export
+- Full accessibility and iPhone/iPad device test matrix
+- Native iOS capabilities, collaboration, community hosting, complex MIDI workflows
+- The remaining exploratory 100-feature wishlist
+
+No paid tiers or payment processing are planned. New functionality should be validated on a physical iPhone before being considered production-ready.
