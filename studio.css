@@ -10,3 +10,5 @@
 
 /* Seamless mode switching: drawing has its own clean black canvas */
 body.drawing-workspace .canvas-stack{background:#020407;border-radius:12px;overflow:hidden}body.drawing-workspace #view{visibility:hidden}body.drawing-workspace #drawLayer{background:#020407;pointer-events:auto}body.drawing-workspace .visual-frame{background:#090d14;box-shadow:0 15px 40px #0006;border-color:#344c4c}body.drawing-workspace .visual-footer .live-dot{background:#8bffb7}body.drawing-workspace #draw-tools{scroll-margin-top:16px}body.drawing-workspace .visual-column{position:static}@media(max-width:850px){.hero{margin-bottom:15px}.tool-nav{padding-bottom:12px}.workspace{gap:12px}}
+
+.draw-motion-panel{margin:16px 0;padding:14px;border:1px solid #376d61;border-radius:14px;background:linear-gradient(145deg,#152b2b,#101925)}.draw-motion-panel strong{display:block;color:#b9ffdd;margin-bottom:4px}.draw-motion-panel p{font-size:12px;color:#a7c6c0}.draw-motion-panel #drawMotionPlay{width:100%;margin-top:8px}
