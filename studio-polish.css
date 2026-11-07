@@ -101,3 +101,5 @@ main{padding:12px 13px 65px}
 #supportPage #repair-tools .flex{display:grid;grid-template-columns:1fr 1fr}
 #supportPage #repair-tools .flex button{font-size:12px;min-width:0}
 }
+
+.discovery-direct-link{display:block;padding:15px;margin:12px 0;background:#8df3d5;color:#09252b;border-radius:12px;font-weight:800;text-align:center;text-decoration:none;min-height:48px}
